@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__table">
+            <h1>LIBRARY PROJECT</h1>
+            <table class="libraryTable">   
+                <tr class="libraryTableHeading">
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                    <th></th>
+                </tr>
+            </table>
+            <button class="newBook">ADD NEW BOOK</button>
+            
+            
+        </div>
+        <div class="container__form">
+            <div class="form">
+                <h2>Register a new book</h2>
+                <input type="text" placeholder="* Insert book author" class="author">
+                <input type="text" placeholder="* Insert book name" class="bookName">
+                <input type="text" placeholder="* Insert page numbers" class="bookPages">
+                <div class="checkboxWrapper">
+                    <input type="checkbox" class="isRead"> <label for="">Is Read?</label>
+                </div>
+                <button type="submit" class="submit">SUBMIT</button>
+            </div>
+        </div>       
+    </div>
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+<script src="firebase.js"></script>
+<script src="js.js"></script>
+
+</html>

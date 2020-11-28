@@ -1,0 +1,114 @@
+@import './variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.05fr 1fr 0.05fr;
+    grid-template-areas: 
+        ". . ."
+        ". content ."
+        ". . .";
+    .container__table{
+        grid-area: content;
+        grid-template-columns: 1fr;
+        display: grid;
+        h1{
+            text-align: center;
+        }
+        .libraryTable{
+            border-collapse: collapse;
+            text-align: left;
+            width: 100%;
+            .libraryTableHeading{ 
+                background-color: $heading;
+                th{
+                color: $headingColor;
+                padding: 0.5rem 1rem;    
+                font-weight: 400;
+                }
+            }
+            .book{
+                background-color: $itemBackground;
+                td{
+                padding: 0.5rem 1rem;
+                }
+            }
+            
+        }
+
+        .newBook{
+            padding: 0.5rem 0.5rem;
+            height: 3rem;
+            width: 10rem;  
+        }
+    }
+    .container__form{   
+        grid-area: content;    
+        z-index: 999;
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        .form{
+            background-color:$formBackground;
+            grid-column: 2/3;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1rem 1rem;
+            h2{
+                margin-bottom: 2rem;
+            }
+            input[type="text"]{
+                margin: 0.5rem 0 0.5rem 0;
+                padding: 0.3rem; 
+                width: 100%;       
+            }
+            .checkboxWrapper{ 
+                margin: 0.5rem 0 0.5rem 0;
+                padding: 0.3rem;
+            }
+            button{
+                margin: 2rem 0 0.5rem 0;
+                padding: 0.3rem;
+                width: 30%;
+            }
+        }
+    }
+}
+    
+
+.showForm{
+        display: grid !important;
+    }
+
+
+@media (max-width: 899px){
+    .container{
+        .container__form{   
+        grid-template-columns: 0.1fr 1fr 0.1fr
+        }
+    }
+    
+}
+
+@media (max-width: 600px){
+    *{
+        font-size: 14px;
+    }
+}
